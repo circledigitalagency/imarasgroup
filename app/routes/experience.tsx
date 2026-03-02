@@ -1,45 +1,75 @@
-import { CTASection } from "~/components/cta-section";
+import { MetaFunction } from "@remix-run/react";
 import SectionHeading from "~/components/section-heading";
 import { site } from "~/lib/data";
 
+export const meta: MetaFunction = () => {
+    return [{ title: "Experience | IMARA PROJECT SERVICES" }];
+};
 
 export default function Experience() {
     return (
-        <div className="py-12 md:py-16">
-            <SectionHeading eyebrow="Experience" title="References & engagements">
-                Experience across a range of organisations and delivery contexts.
+        <div>
+            <SectionHeading eyebrow="Experience" title="A credible track record across corporate, philanthropic, and infrastructure environments.">
+
             </SectionHeading>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
-                {site.experience.highlights.map((x) => (
-                    <div
-                        key={x}
-                        className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/80"
-                    >
-                        {x}
-                    </div>
-                ))}
-            </div>
+            <section className="py-14">
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    {site.experience.highlightsContext.map((context, index) => (
+                        <div
+                            key={index}
+                            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-soft transition hover:-translate-y-1 hover:bg-white/10"
+                        >
+                            {/* Image */}
+                            <div className="relative h-48 overflow-hidden">
+                                <img
+                                    src={context.image}
+                                    alt={context.name}
+                                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                                />
 
-            <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
-                <p className="text-white font-semibold">Subcontract & delivery support</p>
-                <ul className="mt-4 space-y-2 text-sm text-white/75">
-                    {site.experience.subcontracts.map((s) => (
-                        <li key={s} className="flex gap-2">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-amber-300" />
-                            <span>{s}</span>
-                        </li>
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-base-950/50 via-base-900/40 to-transparent" />
+                                {context.tag && (
+                                    <div className="absolute top-4 left-4 rounded-full border border-white/20 bg-black/40 backdrop-blur-md px-3 py-1 text-xs text-white/80">
+                                        {context.tag}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Content */}
+                            <div className="relative p-6">
+                                <h3 className="text-lg font-semibold tracking-tight">
+                                    {context.name}
+                                </h3>
+
+                                <p className="mt-2 text-sm text-white/70 leading-relaxed">
+                                    {context.description}
+                                </p>
+
+                                <div className="mt-4 h-px w-12 bg-brand-primary" />
+                            </div>
+                        </div>
                     ))}
-                </ul>
-            </div>
+                </div>
+            </section>
 
-            <div className="mt-12">
-                <CTASection
-                    title="Let’s discuss your scope"
-                    body="We’ll help you define the right delivery approach and operational support—without overcomplicating it."
-                    cta={site.ctas.primary}
-                />
-            </div>
+            <section className="glass p-8 relative overflow-hidden py-14">
+                <div className="absolute inset-0">
+                    <div className="absolute inset-0 bg-[url('/images/experience.jpg')] bg-cover bg-center opacity-20" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-base-900/85 via-base-900/55 to-transparent" />
+                </div>
+
+                <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div>
+                        <h3 className="text-xl font-semibold">Need project details?</h3>
+                        <p className="mt-1 text-sm text-white/70">
+                            We’ll share relevant references aligned to your scope.
+                        </p>
+                    </div>
+                    <a href="/contact" className="btn-primary w-fit">Request a Call</a>
+                </div>
+            </section>
         </div>
     );
 }

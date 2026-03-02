@@ -5,7 +5,7 @@ import SectionHeading from "~/components/section-heading";
 import { site } from "~/lib/data";
 
 export const meta: MetaFunction = () => {
-    return [{ title: "Contact | IMARAS GROUP" }];
+    return [{ title: "Contact | IMARA PROJECT SERVICES" }];
 };
 
 function isEmail(value: string) {
@@ -40,76 +40,47 @@ export async function action({ request }: ActionFunctionArgs) {
         );
     }
 
-    //   sgMail.setApiKey(apiKey);
 
-    //   const subject = `Website enquiry — ${name}`;
-    //   const text = [
-    //     `New website enquiry`,
-    //     ``,
-    //     `Name: ${name}`,
-    //     `Email: ${email}`,
-    //     phone ? `Phone: ${phone}` : `Phone: (not provided)`,
-    //     ``,
-    //     `Message:`,
-    //     message,
-    //   ].join("\n");
-
-    //   try {
-    //     await sgMail.send({
-    //       to: toEmail,
-    //       from: { email: fromEmail, name: fromName },
-    //       replyTo: email,
-    //       subject,
-    //       text,
-    //     });
-
-    //     return json({ ok: true });
-    //   } catch (err) {
-    //     return json(
-    //       { ok: false, errors: { form: "Failed to send message. Try again soon." } },
-    //       { status: 500 }
-    //     );
-    //   }
 }
 
 export default function Contact() {
     const actionData = useActionData<typeof action>();
 
     return (
-        <div className="py-12 md:py-16">
+        <div>
             <SectionHeading eyebrow="Contact Us" title="Request a call">
                 Send your details and we’ll get back to you.
             </SectionHeading>
 
-            <div className="mt-10 grid grid-cols-3 gap-6">
+            <div className="mt-10 grid md:grid-cols-3 gap-6">
                 <aside className="rounded-3xl border border-white/10 bg-white/5 p-8 h-fit">
                     <p className="text-white font-semibold">Direct contact</p>
-                    <ul className="mt-4 space-y-2 text-sm text-white/75">
-                        <div className="flex items-center space-x-2">
-                            <Mail className="w-4 h-4" />
-                            <li>
-                                <a className="hover:text-white" href={`tel:${site.contact.email}`}>
-                                    {site.contact.email}
-                                </a>
-                            </li>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <Phone className="w-4 h-4" />
-                            <li>
-                                <a className="hover:text-white" href={`tel:${site.contact.phone}`}>
-                                    {site.contact.phone}
-                                </a>
-                            </li>
-                        </div>
-                        {/* <div className="flex items-center space-x-2">
-                            <Pin className="w-4 h-4" />
-                            <li>
-                                <a className="hover:text-white">
-                                    {site.contact.addressLine}
-                                </a>
-                            </li>
-                        </div> */}
+                    <ul className="mt-4 space-y-3 text-sm text-white/75">
+                        <li className="flex items-center gap-2">
+                            <Mail className="w-4 h-4 text-brand-primary" />
+                            <a className="hover:text-white" href={`mailto:${site.contact.email}`}>
+                                {site.contact.email}
+                            </a>
+                        </li>
+
+                        <li className="flex items-center gap-2">
+                            <Phone className="w-4 h-4 text-brand-primary" />
+                            <a className="hover:text-white" href={`tel:${site.contact.phone}`}>
+                                {site.contact.phone}
+                            </a>
+                        </li>
                     </ul>
+
+                    <div className="mt-6">
+                        <a
+                            className="btn-ghost w-full justify-center"
+                            href={`https://wa.me/27${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent("Hi IMARAS Group, I’d like to request a call about a project.")}`}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            WhatsApp us
+                        </a>
+                    </div>
                 </aside>
                 <div className="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-8">
                     {actionData?.errors?.form ? (

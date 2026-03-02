@@ -25,9 +25,30 @@ export default {
 				"2xl": "1.25rem",
 			},
 			boxShadow: {
-				soft: "0 10px 30px rgba(0,0,0,0.12)",
+				soft: "0 10px 30px rgba(0,0,0,0.35)",
+			},
+			backdropBlur: {
+				xs: "2px",
 			},
 			colors: {
+				base: {
+					950: "#070A10",
+					900: "#0B1220",
+					850: "#0E1628",
+					800: "#111C31",
+				},
+				gold: {
+					50: "#FFF7E6",
+					200: "#FFE0A3",
+					400: "#F7C66A",
+					500: "#E8B64D",
+					700: "#B9821D",
+				},
+				glass: {
+					border: "rgba(255,255,255,0.10)",
+					surface: "rgba(255,255,255,0.06)",
+					surface2: "rgba(255,255,255,0.08)",
+				},
 				brand: {
 					navy: "#1F3A5F",
 					steel: "#4F6D8A",

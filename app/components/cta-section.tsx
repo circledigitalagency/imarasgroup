@@ -16,7 +16,7 @@ export function CTASection({
             <div className="mt-6">
                 <Link
                     to={cta.href}
-                    className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-6 py-3 font-medium text-slate-950 hover:bg-amber-300 transition"
+                    className="inline-flex items-center justify-center bg-amber-400 px-6 py-3 font-medium text-slate-950 hover:bg-amber-300 transition"
                 >
                     {cta.label}
                 </Link>

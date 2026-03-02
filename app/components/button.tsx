@@ -9,7 +9,7 @@ type Props = {
 
 export function Button({ to, children, variant = "primary", prefetch = "intent" }: Props) {
     const base =
-        "inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-brand-gold/50";
+        "inline-flex items-center justify-center px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-brand-gold/50";
     const styles =
         variant === "primary"
             ? "bg-brand-navy text-white hover:opacity-95 shadow-soft"
