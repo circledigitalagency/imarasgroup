@@ -29,7 +29,7 @@ export default function Experience() {
                                 />
 
                                 {/* Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-base-950/50 via-base-900/40 to-transparent" />
+
                                 {context.tag && (
                                     <div className="absolute top-4 left-4 rounded-full border border-white/20 bg-black/40 backdrop-blur-md px-3 py-1 text-xs text-white/80">
                                         {context.tag}
@@ -56,8 +56,8 @@ export default function Experience() {
 
             <section className="glass p-8 relative overflow-hidden py-14">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[url('/images/experience.jpg')] bg-cover bg-center opacity-20" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-base-900/85 via-base-900/55 to-transparent" />
+                    <div className="absolute inset-0 bg-[url('/images/experience.jpg')] bg-cover bg-center" />
+
                 </div>
 
                 <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">

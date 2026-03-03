@@ -14,9 +14,7 @@ export default function Index() {
     <div className="space-y-10">
       <section className="relative overflow-hidden glass p-8 md:p-12 md:mt-8">
         <div className="absolute inset-0">
-          {/* background image layer (replace with your construction image) */}
-          <div className="absolute inset-0 bg-[url('/public/hero.jpg')] bg-cover bg-center opacity-25" />
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-base-900/5 via-base-900/5 to-transparent" /> */}
+          <div className="absolute inset-0 bg-[url('/public/hero.jpg')] bg-cover bg-center opacity-50" />
         </div>
 
         <div className="relative max-w-2xl">
@@ -97,25 +95,23 @@ export default function Index() {
                 className="group glass overflow-hidden transition hover:-translate-y-1 hover:bg-white/10"
               >
                 {/* Image header */}
-                <div className="relative h-36 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-30 transition duration-700 group-hover:scale-105"
+                    className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url(${s.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-base-950/90 via-base-900/40 to-transparent" />
+                </div>
 
-                  {/* Icon + title */}
-                  <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                {/* Body */}
+                <div className="p-6">
+                  <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 border border-white/10 text-gold-400">
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </div>
                     <div className="text-lg font-semibold tracking-tight">{s.title}</div>
                   </div>
-                </div>
 
-                {/* Body */}
-                <div className="p-6">
-                  <p className="text-sm text-white/70 leading-relaxed">{s.summary}</p>
+                  <p className="text-sm text-white/70 leading-relaxed mt-4">{s.summary}</p>
 
                   {/* Chips */}
                   {s.bestFor?.length ? (
@@ -164,9 +160,6 @@ export default function Index() {
                   alt={context.name}
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-base-950/50 via-base-900/40 to-transparent" />
                 {context.tag && (
                   <div className="absolute top-4 left-4 rounded-full border border-white/20 bg-black/40 backdrop-blur-md px-3 py-1 text-xs text-white/80">
                     {context.tag}

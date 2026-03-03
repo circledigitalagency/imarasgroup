@@ -25,25 +25,24 @@ export default function Services() {
                             className="group glass overflow-hidden transition hover:-translate-y-1 hover:bg-white/10"
                         >
                             {/* image header */}
-                            <div className="relative h-40 overflow-hidden">
+                            <div className="relative h-48 overflow-hidden">
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center opacity-30 transition duration-700 group-hover:scale-105"
+                                    className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105"
                                     style={{ backgroundImage: `url(${s.image})` }}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-base-950/25 via-base-900/20 to-transparent" />
-                                <div className="absolute bottom-4 left-4 flex items-center gap-2">
+
+                            </div>
+
+                            <div className="p-6">
+                                <div className="flex items-center gap-2">
                                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 border border-white/10 text-gold-400">
                                         <Icon className="h-5 w-5" strokeWidth={1.5} />
                                     </div>
                                     <h3 className="text-lg font-semibold">{s.title}</h3>
                                 </div>
-                            </div>
-
-                            <div className="p-6">
-                                {/* <p className="text-sm text-white/75 leading-relaxed">{s.summary}</p> */}
 
                                 {s.bestFor?.length ? (
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-wrap gap-2 mt-4">
                                         {s.bestFor.map((chip) => (
                                             <span
                                                 key={chip}

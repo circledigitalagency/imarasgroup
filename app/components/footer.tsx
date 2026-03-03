@@ -109,7 +109,7 @@ export function Footer() {
                 </div>
 
                 {/* Bottom line */}
-                <div className="md:mt-14 mt-4 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="mt-4 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-white/50">
                         © {new Date().getFullYear()} {site.name}. All rights reserved.
                     </p>
