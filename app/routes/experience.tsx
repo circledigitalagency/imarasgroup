@@ -3,7 +3,12 @@ import SectionHeading from "~/components/section-heading";
 import { site } from "~/lib/data";
 
 export const meta: MetaFunction = () => {
-    return [{ title: "Experience | IMARA PROJECT SERVICES" }];
+    return [{ title: "Construction & Infrastructure Project Experience | IMARA Project Services" },
+    {
+        name: "description",
+        content:
+            "View IMARA Project Services experience across infrastructure delivery, housing development, subcontract execution, and operational support.",
+    },];
 };
 
 export default function Experience() {

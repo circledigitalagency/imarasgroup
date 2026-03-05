@@ -42,9 +42,9 @@ export default function Navbar() {
                     <div className="px-4 py-3">
                         <div className="flex items-center justify-between gap-4">
                             <Link to="/" className="flex items-center gap-3">
-                                <img src="/logo.svg" className="w-8" alt="IMARAS logo" />
+                                <img src="/logo.svg" className="w-8" alt="IMARA Project Services logo" />
                                 <div className="leading-tight">
-                                    <div className="text-base font-semibold tracking-wide">IMARAS</div>
+                                    <div className="text-base font-semibold tracking-wide">IMARA</div>
                                     <div className="text-sm text-white/70">Project Services</div>
                                 </div>
                             </Link>
@@ -117,9 +117,9 @@ export default function Navbar() {
                     {/* Header */}
                     <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
                         <div className="flex items-center gap-3">
-                            <img src="/logo.svg" className="w-7" alt="IMARAS logo" />
+                            <img src="/logo.svg" className="w-7" alt="IMARA Project Services logo" />
                             <div className="leading-tight">
-                                <div className="text-sm font-semibold tracking-wide">IMARAS</div>
+                                <div className="text-sm font-semibold tracking-wide">IMARA Project Services</div>
                                 <div className="text-xs text-white/60">Navigation</div>
                             </div>
                         </div>
@@ -171,8 +171,8 @@ export default function Navbar() {
                         <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
                             <p className="text-xs uppercase tracking-wide text-gold-400">Direct contact</p>
                             <div className="mt-3 space-y-2 text-sm text-white/75">
-                                <a className="block hover:text-white" href="mailto:info@imarasgroup.co.za">
-                                    info@imarasgroup.co.za
+                                <a className="block hover:text-white" href="mailto:info@imaraps.co.za">
+                                    info@imaraps.co.za
                                 </a>
                                 <a className="block hover:text-white" href="tel:0837848001">
                                     083 784 8001

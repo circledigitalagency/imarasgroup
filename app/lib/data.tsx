@@ -8,7 +8,7 @@ export const site = {
   contact: {
     email: "info@imaraps.co.za",
     phone: "+27 83 784 8001",
-    website: "imaraps.co.za",
+    website: "www.imaraps.co.za",
     regNumber: "2017/309920/07",
     addressLine: ["Pretoria, Gauteng", "Polokwane, Limpopo"],
   },

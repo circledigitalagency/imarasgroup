@@ -7,7 +7,12 @@ import { z } from "zod";
 import * as nodemailer from "nodemailer";
 
 export const meta: MetaFunction = () => {
-    return [{ title: "Contact | IMARA PROJECT SERVICES" }];
+    return [{ title: "Contact IMARA Project Services | Request Infrastructure Project Support" },
+    {
+        name: "description",
+        content:
+            "Contact IMARA Project Services to discuss infrastructure delivery, construction supervision, maintenance services, or project management support.",
+    },];
 };
 
 type ActionData = {
@@ -181,7 +186,7 @@ export default function Contact() {
                     <div className="mt-6">
                         <a
                             className="btn-ghost w-full justify-center"
-                            href={`https://wa.me/27${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent("Hi IMARAS Group, I’d like to request a call about a project.")}`}
+                            href={`https://wa.me/27${site.contact.phone.replace(/\D/g, "").replace(/^0/, "")}?text=${encodeURIComponent("Hi IMARA Project Services, I’d like to request a call about a project.")}`}
                             target="_blank"
                             rel="noreferrer"
                         >

@@ -5,7 +5,12 @@ import { ServiceCard } from "~/components/ui/service-card";
 import { site } from "~/lib/data";
 
 export const meta: MetaFunction = () => {
-    return [{ title: "Services | IMARA PROJECT SERVICES" }];
+    return [{ title: "Infrastructure, Facilities & Property Management Services | IMARA Project Services" },
+    {
+        name: "description",
+        content:
+            "Explore IMARA project services including infrastructure delivery, facilities maintenance, property management, and asset lifecycle solutions.",
+    },];
 };
 
 export default function Services() {

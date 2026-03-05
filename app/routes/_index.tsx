@@ -4,8 +4,12 @@ import { site } from "~/lib/data";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Home | IMARA PROJECT SERVICES" },
-    { name: "description", content: "IMARA PROJECT SERVICES is a multidisciplinary infrastructure, project delivery, and asset support company committed to structured, sustainable solutions across the built environment." },
+    { title: "Infrastructure & Project Delivery Services | IMARA Project Services South Africa" },
+    {
+      name: "description",
+      content:
+        "IMARA Project Services provides infrastructure project delivery, construction supervision, and asset lifecycle services across South Africa, supporting renovations, housing development, and long-term facilities management.",
+    }
   ];
 };
 

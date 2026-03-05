@@ -13,7 +13,7 @@ export function Footer() {
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3">
-                            <img src="/logo.svg" className="w-9" alt="IMARAS logo" />
+                            <img src="/logo.svg" className="w-9" alt="IMARA Project Services logo" />
                             <div>
                                 <p className="text-sm font-semibold tracking-wide">
                                     {site.name}
