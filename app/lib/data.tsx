@@ -7,10 +7,10 @@ export const site = {
     "A multidisciplinary infrastructure, project delivery, and asset support company committed to structured, sustainable solutions across the built environment.",
   contact: {
     email: "info@imaraps.co.za",
-    phone: "+27 83 784 8001", // update
+    phone: "+27 83 784 8001",
     website: "imaraps.co.za",
-    regNumber: "2017/309920/07", // update if you want public
-    addressLine: "Johannesburg, South Africa", // update
+    regNumber: "2017/309920/07",
+    addressLine: ["Pretoria, Gauteng", "Polokwane, Limpopo"],
   },
   ctas: {
     primary: { label: "Request a Call", href: "/contact" },

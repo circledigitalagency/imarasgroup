@@ -12,24 +12,24 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="space-y-10">
-      <section className="relative overflow-hidden glass p-8 md:p-12 md:mt-8">
+      <section className="relative overflow-hidden glass p-8 md:p-12 md:mt-8 h-[80vh] md:h-[60vh]">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/public/hero.jpg')] bg-cover bg-center opacity-50" />
+          <div className="absolute inset-0 bg-[url('/public/hero-test.jpg')] bg-cover bg-center opacity-30" />
         </div>
 
-        <div className="relative max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
+        <div className="relative flex flex-col justify-center items-center w-full h-full">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs md:text-base text-white/80">
             Premium Infrastructure & Delivery
             <span className="h-1 w-1 rounded-full bg-brand-primary" />
             South Africa
           </div>
 
-          <h1 className="mt-5 text-4xl md:text-6xl font-semibold leading-[0.98] tracking-[-0.02em]">
+          <h1 className="mt-5 text-4xl md:text-7xl font-semibold leading-[0.98] tracking-[-0.02em] text-center">
             Strength. Structure.
             <span className="text-brand-primary"> Sustainability.</span>
           </h1>
 
-          <p className="mt-5 text-white/75 text-base md:text-lg">
+          <p className="mt-5 text-white/75 text-base md:text-xl max-w-3xl text-center">
             A multidisciplinary infrastructure, project delivery, and asset support partner focused on structured execution
             and long-term performance.
           </p>
@@ -46,7 +46,7 @@ export default function Index() {
           <div className="hidden md:block text-sm text-white/60">Clear planning → disciplined execution → sustainable support</div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-12 md:grid-cols-3">
           {site.approach.map((p) => {
             const Icon = p.icon;
             return (
@@ -84,7 +84,7 @@ export default function Index() {
           </Link>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-12 md:grid-cols-2">
           {site.services.map((s) => {
             const Icon = s.icon;
 
@@ -147,7 +147,7 @@ export default function Index() {
           </div>
           <Link to="/experience" className="btn-ghost">View All Experiences</Link>
         </div>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-12">
           {site.experience.highlightsContext.slice(0, 3).map((context, index) => (
             <div
               key={index}

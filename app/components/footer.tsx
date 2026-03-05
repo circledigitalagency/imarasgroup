@@ -91,7 +91,10 @@ export function Footer() {
                                 </a>
                             </li>
                             {site.contact.addressLine && (
-                                <li>{site.contact.addressLine}</li>
+                                <>
+                                    <li>{site.contact.addressLine[0]}</li>
+                                    <li>{site.contact.addressLine[site.contact.addressLine.length - 1]}</li>
+                                </>
                             )}
                         </ul>
                     </div>
