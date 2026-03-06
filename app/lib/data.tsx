@@ -10,7 +10,7 @@ export const site = {
     phone: "+27 83 784 8001",
     website: "www.imaraps.co.za",
     regNumber: "2017/309920/07",
-    addressLine: ["Pretoria, Gauteng", "Polokwane, Limpopo"],
+    addressLine: ["Gauteng - 192 Cradock Ave, Lyttelton Manor, Centurion, 0157", "Limpopo - 627 Sisulu Street, Nobody Ga-Mothiba, Polokwane, 0726"],
   },
   ctas: {
     primary: { label: "Request a Call", href: "/contact" },

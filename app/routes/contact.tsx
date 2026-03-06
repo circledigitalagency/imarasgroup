@@ -1,6 +1,6 @@
 import { ActionFunctionArgs } from "@remix-run/node";
 import { MetaFunction, json, useActionData, Form, useNavigation } from "@remix-run/react";
-import { Loader, Mail, Phone, Pin } from "lucide-react";
+import { Loader, Mail, MapPin, Phone, Pin } from "lucide-react";
 import SectionHeading from "~/components/section-heading";
 import { site } from "~/lib/data";
 import { z } from "zod";
@@ -179,6 +179,18 @@ export default function Contact() {
                             <Phone className="w-4 h-4 text-brand-primary" />
                             <a className="hover:text-white" href={`tel:${site.contact.phone}`}>
                                 {site.contact.phone}
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <MapPin className="w-6 h-6 text-brand-primary" />
+                            <a className="hover:text-white">
+                                {site.contact.addressLine[0]}
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <MapPin className="w-6 h-6 text-brand-primary" />
+                            <a className="hover:text-white">
+                                {site.contact.addressLine[site.contact.addressLine.length - 1]}
                             </a>
                         </li>
                     </ul>

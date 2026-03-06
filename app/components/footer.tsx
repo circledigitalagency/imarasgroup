@@ -8,7 +8,7 @@ export function Footer() {
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/40 to-transparent" />
 
             <div className="mx-auto container px-6 py-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
 
                     {/* Brand */}
                     <div>
@@ -23,11 +23,11 @@ export function Footer() {
                                 </p>
                             </div>
                         </div>
-
+                        {/* 
                         <p className="mt-5 text-sm text-white/70 leading-relaxed max-w-xs">
                             Structured infrastructure, project delivery, and asset support
                             built on accountability and disciplined execution.
-                        </p>
+                        </p> */}
 
                         <a
                             href="/contact"
@@ -90,6 +90,15 @@ export function Footer() {
                                     {site.contact.phone}
                                 </a>
                             </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="text-xs uppercase tracking-wide text-gold-400">
+                            Address
+                        </p>
+
+                        <ul className="mt-5 space-y-3 text-sm text-white/70">
+
                             {site.contact.addressLine && (
                                 <>
                                     <li>{site.contact.addressLine[0]}</li>
