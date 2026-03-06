@@ -18,7 +18,7 @@ export default function Index() {
     <div className="space-y-10">
       <section className="relative overflow-hidden glass p-8 md:p-12 md:mt-8 h-[80vh] md:h-[60vh]">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('/public/hero-test.jpg')] bg-cover bg-center opacity-30" />
+          <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dfxorvtuc/image/upload/v1772787473/hero-test_qpcozh.jpg')] bg-cover bg-center opacity-30" />
         </div>
 
         <div className="relative flex flex-col justify-center items-center w-full h-full">
