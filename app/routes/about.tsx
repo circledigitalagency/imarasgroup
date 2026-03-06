@@ -16,9 +16,7 @@ export default function About() {
         <div className="space-y-14">
             <section className="relative overflow-hidden glass p-8 md:p-12 mt-8">
                 <div className="absolute inset-0">
-                    {/* background image layer (replace with your construction image) */}
                     <div className="absolute inset-0 bg-[url('/about-site.jpg')] bg-cover bg-center opacity-25" />
-                    {/* <div className="absolute inset-0 bg-gradient-to-r from-base-900/5 via-base-900/5 to-transparent" /> */}
                 </div>
 
                 <div className="relative max-w-2xl">
